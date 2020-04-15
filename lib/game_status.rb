@@ -29,13 +29,9 @@ def over?(board)
 end
 
 def winner(board)
-  if board.all? do |index|
-      won?(board).each{|i| board[i] == "X"}
-    end
+  if won?(board).each{|i| board[i] == "X"}
     "X"
-  elsif board.all? do |index|
-      won?(board).each{|i| board[i] == "O"}
-    end
+  elsif won?(board).each{|i| board[i] == "O"}
     "O"
   else
     nil
