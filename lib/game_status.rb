@@ -22,6 +22,8 @@ end
 
 def draw?(board)
   if full?(board) == true
-     board.select{|token| token == "X"}.length == board.select{|token| token == "O"}.length
+     if board.select{|token| token == "X"}.length == board.select{|token| token == "O"}.length
+       true
+     end
   end
 end
