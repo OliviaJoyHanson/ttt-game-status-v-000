@@ -23,7 +23,7 @@ end
 def draw?(board)
   x_amount = board.select{|token| token == "X"}
   o_amount = board.select{|token| token == "O"}
-  if full?(board) == true && x_amount.length == o_amount.length
+  if full?(board) && x_amount.length == o_amount.length
     true
   end
 end
