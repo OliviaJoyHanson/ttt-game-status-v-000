@@ -29,5 +29,11 @@ def over?(board)
 end
 
 def winner(board)
-  
+  if board.all? do |index|
+      won?(board).each{|i| board[i] == "X"}
+    end
+    "X"
+  else
+    "O"
+  end
 end
