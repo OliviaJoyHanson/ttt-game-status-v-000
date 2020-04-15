@@ -33,7 +33,13 @@ def winner(board)
       won?(board).each{|i| board[i] == "X"}
     end
     "X"
-  else
+  elsif board.all? do |index|
+      won?(board).each{|i| board[i] == "X"}
+    end
     "O"
+  else
+    nil
+  end
+    
   end
 end
