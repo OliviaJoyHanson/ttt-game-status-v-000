@@ -21,9 +21,5 @@ def full?(board)
 end
 
 def draw?(board)
-  x_amount = board.select{|token| token == "X"}
-  o_amount = board.select{|token| token == "O"}
-  if full?(board) && x_amount.length == o_amount.length
-    true
-  end
+  !won?(board) && full?(board)
 end
